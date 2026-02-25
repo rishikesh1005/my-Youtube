@@ -53,7 +53,7 @@ const Head = () => {
 
     return(
 
-        <div className="grid grid-flow-col m-2 p-5 shadow-lg ">
+        <div className="sticky top-0 bg-white grid grid-flow-col m-2 p-5 shadow-lg ">
             <div className="flex col-span-1">
                 <img 
                     onClick={() => handleToggleMenu()}
@@ -81,7 +81,7 @@ const Head = () => {
                 />
                 <button className="border border-gray-400 px-5 py-2 bg-gray-100 rounded-r-full">🔍</button>
              </div>
-             {showSuggestion && (<div className="fixed bg-white px-2 py-2 w-[36rem] shadow-lg rounded-lg border border-gray-100">
+             {(suggestion.length > 0) && showSuggestion && (<div className="fixed bg-white px-2 py-2 w-[36rem] shadow-lg rounded-lg border border-gray-100">
                 <ul>
                     {suggestion.map((s) => <li key={s} className="py-2 px-3 shadow-sm hover:bg-gray-100">🔍 {s}</li>)}    
                 </ul>
